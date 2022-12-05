@@ -14,28 +14,16 @@ function playGame(playerInput) {
     }
 
     function displayResult(argComputerMove, argPlayerMove){
-        if(argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
+        if (argComputerMove == argPlayerMove){
             printMessage('Remis')
-        } else if(argComputerMove == 'kamień' && argPlayerMove == 'papier') {
+        }else if (argComputerMove == 'kamień' && argPlayerMove == 'papier' ){
             printMessage('Wygrałeś')
-        } else if(argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
-            printMessage('Przegrałeś')
-        } else if(argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-            printMessage('Przegrałeś')
-        } else if(argComputerMove == 'papier' && argPlayerMove == 'papier') {
-            printMessage('Remis')
-        } else if(argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
+        }else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
             printMessage('Wygrałeś')
-        } else if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
+        }else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
             printMessage('Wygrałeś')
-        } else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
+        }else {
             printMessage('Przegrałeś')
-        } else if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
-            printMessage('Remis')
-        } else if(argPlayerMove == 'nieznany ruch') {
-            printMessage('Nie no... Młotkiem na mnie?')
-        } else if(argComputerMove == undefined && argPlayerMove == undefined) {
-            printMessage('I mamy undefined')
         }
     }
     let randomNumber = Math.floor(Math.random() * 3 + 1);
